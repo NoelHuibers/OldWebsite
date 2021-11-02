@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Consolas";
+}
+body {
+  min-height: 100vh;
+  background: #021d45;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  padding: 0 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  margin: auto;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+header nav {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav li {
+  flex: 0 0 auto;
+  list-style: none;
+  margin-left: 1rem;
+}
+header nav li a {
+  text-decoration: none;
+  padding: 6px, 15px;
+  color: #fff;
+  border-radius: 20px;
+  transition: color 0.5s ease-out;
+}
+header nav li a:hover,
+header nav li a.active {
+  color: #ff3e55;
+  transition: color 0.5s ease-out;
+}
+header nav li a.active {
+  color: #217aff;
+  transition: color 0.5s ease-out;
+}
+header nav li a.active:hover {
+  color: #ff3e55;
+  transition: color 0.5s ease-out;
+}
+header nav li svg {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #ff3e55;
+  position: relative;
+  top: 2px;
+  transition: fill 0.5s ease-out;
+}
+header nav li svg:hover {
+  fill: #fff;
+  transition: fill 0.5s ease-out;
+}
