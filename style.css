@@ -3,25 +3,32 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Consolas";
+  scroll-behavior: smooth;
 }
 body {
-  min-height: 100vh;
+  min-height: 200vh;
   background: #021d45;
 }
 header {
-  position: absolute;
+  --text: #fff;
+  --text-inverse: #ff3e55;
+  --background: transparent;
+
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 8rem;
+  z-index: 10000;
   padding: 0 1rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--background);
 }
 header .logo {
   margin: auto;
-  color: #fff;
+  color: var(--text);
   font-weight: 700;
   text-decoration: none;
   font-size: 2em;
@@ -42,7 +49,7 @@ header nav li {
 header nav li a {
   text-decoration: none;
   padding: 6px, 15px;
-  color: #fff;
+  color: var(--text);
   border-radius: 20px;
   transition: color 0.5s ease-out;
 }
@@ -71,4 +78,71 @@ header nav li svg {
 header nav li svg:hover {
   fill: #fff;
   transition: fill 0.5s ease-out;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 130vh;
+  padding: 200px 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#text {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+}
+.work {
+  height: 120vh;
+  position: relative;
+  padding: 100px 20vw;
+  background: #fff;
+}
+.work h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #021d45;
+}
+.work p {
+  font-size: 1em;
+  color: #021d45;
+}
+.about {
+  position: relative;
+  padding: 100px 20vw;
+  color: #fff;
+  height: 120vh;
+}
+.about h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.about p {
+  font-size: 1em;
+  color: #fff;
+}
+.wave {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(104% + 1.3px);
+  height: 101px;
+  transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+  fill: #ffffff;
 }
