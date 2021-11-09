@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Noels Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css?version=3" />
+    <link rel="stylesheet" type="text/css" href="style.css?version=4" />
   </head>
   <body>
     <div class = "container">
@@ -72,48 +72,36 @@
       </div>
       <section>
         <div class="work" id="work">
-          <h2>Project1</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nihil
-            alias natus explicabo itaque suscipit voluptas incidunt cumque
-            praesentium. Nesciunt, minima. Deleniti alias autem eius consequuntur
-            odit repudiandae quisquam. Nihil. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Sed enim, aperiam quibusdam ex
-            voluptatum qui est at quia, repellendus vitae ducimus quam quos ipsam
-            laudantium omnis? Iure nobis ipsa inventore. Lorem ipsum dolor, sit
-            amet consectetur adipisicing elit. Labore similique excepturi numquam
-            temporibus vitae nihil autem quam nostrum repellat ea quas nobis,
-            maxime dolorum voluptatibus, possimus perferendis suscipit doloremque
-            voluptatem.
-          </p>
-          <h2>Project2</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nihil
-            alias natus explicabo itaque suscipit voluptas incidunt cumque
-            praesentium. Nesciunt, minima. Deleniti alias autem eius consequuntur
-            odit repudiandae quisquam. Nihil. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Sed enim, aperiam quibusdam ex
-            voluptatum qui est at quia, repellendus vitae ducimus quam quos ipsam
-            laudantium omnis? Iure nobis ipsa inventore. Lorem ipsum dolor, sit
-            amet consectetur adipisicing elit. Labore similique excepturi numquam
-            temporibus vitae nihil autem quam nostrum repellat ea quas nobis,
-            maxime dolorum voluptatibus, possimus perferendis suscipit doloremque
-            voluptatem.
-          </p>
-          <h2>Project 3</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est nihil
-            alias natus explicabo itaque suscipit voluptas incidunt cumque
-            praesentium. Nesciunt, minima. Deleniti alias autem eius consequuntur
-            odit repudiandae quisquam. Nihil. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Sed enim, aperiam quibusdam ex
-            voluptatum qui est at quia, repellendus vitae ducimus quam quos ipsam
-            laudantium omnis? Iure nobis ipsa inventore. Lorem ipsum dolor, sit
-            amet consectetur adipisicing elit. Labore similique excepturi numquam
-            temporibus vitae nihil autem quam nostrum repellat ea quas nobis,
-            maxime dolorum voluptatibus, possimus perferendis suscipit doloremque
-            voluptatem.
-          </p>
+          <div class="card">
+            <div class="cardcontent">
+              <h2>01</h2>
+              <h3>Project One</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quaerat beatae impedit voluptatibus doloremque natus, provident cumque, aliquid eveniet reprehenderit, cupiditate repellat sint error rem quae quod ullam id corrupti.
+              </p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="cardcontent">
+              <h2>02</h2>
+              <h3>Project Two</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quaerat beatae impedit voluptatibus doloremque natus, provident cumque, aliquid eveniet reprehenderit, cupiditate repellat sint error rem quae quod ullam id corrupti.
+              </p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="cardcontent">
+              <h2>03</h2>
+              <h3>Project Three</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quaerat beatae impedit voluptatibus doloremque natus, provident cumque, aliquid eveniet reprehenderit, cupiditate repellat sint error rem quae quod ullam id corrupti.
+              </p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
         </div>
       </section>
       <section>
@@ -157,7 +145,16 @@
           </p>
         </div>
       </section>
-      <script src="app.js"></script>
+      <script src="app.js?version=1"></script>
+      <script type="text/javascript" src="vanilla-tilt.js"></script>
+      <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+          max: 25,
+          speed: 400,
+          glare: true,
+          "max-glare": 1
+        });
+      </script>
     </body>
   </div>
 </html>
