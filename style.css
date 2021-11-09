@@ -5,6 +5,10 @@
   font-family: "Consolas";
   scroll-behavior: smooth;
 }
+:root {
+  --text: #fff;
+  --text-inverse: #ff3e55;
+}
 body {
   width: 100vw;
   height: 100vh;
@@ -18,9 +22,6 @@ body {
   overflow-y: scroll;
 }
 header {
-  --text: #fff;
-  --text-inverse: #ff3e55;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -47,32 +48,32 @@ header nav {
   justify-content: center;
   align-items: center;
 }
-header nav li {
+header li {
   flex: 0 0 auto;
   list-style: none;
   margin-left: 1rem;
 }
-header nav li a {
+header li a {
   text-decoration: none;
   padding: 6px, 15px;
   color: var(--text);
   border-radius: 20px;
   transition: color 0.5s ease-out;
 }
-header nav li a:hover,
-header nav li a.active {
+header li a:hover,
+header li a.active {
   color: #ff3e55;
   transition: color 0.5s ease-out;
 }
-header nav li a.active {
+header li a.active {
   color: #217aff;
   transition: color 0.5s ease-out;
 }
-header nav li a.active:hover {
+header li a.active:hover {
   color: #ff3e55;
   transition: color 0.5s ease-out;
 }
-header nav li svg {
+header li svg {
   display: block;
   width: 1.2rem;
   height: 1.2rem;
@@ -81,8 +82,8 @@ header nav li svg {
   top: 2px;
   transition: fill 0.5s ease-out;
 }
-header nav li svg:hover {
-  fill: #fff;
+header li svg:hover {
+  fill: var(--text);
   transition: fill 0.5s ease-out;
 }
 section {
@@ -112,6 +113,7 @@ section {
   position: relative;
   padding: 100px 20vw;
   background: #fff;
+  min-height: 200vh;
 }
 .work h2 {
   font-size: 3.5em;

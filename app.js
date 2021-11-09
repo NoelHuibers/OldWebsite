@@ -1,21 +1,16 @@
-const header = document.querySelector("header")
-const sectionOne = document.querySelector(".uc")
-const sectionTwo = document.querySelector(".work")
-const sectionThree = document.querySelector(".about")
+const header = document.querySelector("header");
+const sectionTwo = document.querySelector(".work");
 
-const sectionOneOptions = {
-    
+const topMargin = header.offsetHeight;
+const bottomMargin = window.innerHeight - header.offsetHeight;
+
+const options = {
+  rootMargin: `-${topMargin}px 0px -${bottomMargin}px 0px`,
 }
 
-const sectionOneObserver = new IntersectionObserver(function(entries, sectionOneObserver) {   
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            header.classList.add("nav-scrolled")
-        } else {
-            header.classList.remove("nav-scrolled")
-        }
-    });
-},
-sectionOneOptions);
+const observer = new IntersectionObserver(([entry]) => {
+  const color = entry.isIntersecting ? "#021d45" : "#fff";
+  document.documentElement.style.setProperty('--text', color);
+}, options);
 
-sectionOneObserver.observe(sectionOne)
+observer.observe(sectionTwo);
