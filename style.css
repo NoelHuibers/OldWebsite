@@ -111,7 +111,7 @@ section {
 .work {
   display: flex;
   height: 100vh;
-  background: #fff;
+  background: #f4f4f4;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
@@ -148,11 +148,11 @@ section {
   transform: rotateY(180deg);
 }
 .wave .shape-fill {
-  fill: #ffffff;
+  fill: #f4f4f4;
 }
 .work .card {
   position: relative;
-  width: 300px;
+  width: 280px;
   height: 400px;
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -165,13 +165,9 @@ section {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
-  transition: opacity 0.5s;
-  opacity: 0.8;
 }
 .work .card:hover {
   background-image: linear-gradient(135deg, #d41e31, #491f8f, transparent);
-  transition: opacity 0.5s;
-  opacity: 1;
 }
 .work .card .cardcontent {
   padding: 20px;
