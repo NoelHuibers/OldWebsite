@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Consolas";
+  font-family: "Inconsolata", monospace;
   scroll-behavior: smooth;
 }
 :root {
@@ -89,9 +89,6 @@ header li svg:hover {
 section {
   scroll-snap-align: start;
 }
-.nav-scrolled {
-  --text: #021d45;
-}
 .uc {
   position: relative;
   width: 100%;
@@ -101,35 +98,12 @@ section {
   justify-content: center;
   align-items: center;
 }
-#text {
+.uc h2 {
   position: absolute;
   color: #fff;
   white-space: nowrap;
   font-size: 7.5vw;
   z-index: 9;
-}
-.work {
-  display: flex;
-  height: 100vh;
-  background: #f4f4f4;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-}
-.about {
-  position: relative;
-  padding: 100px 20vw;
-  color: #fff;
-  height: 100vh;
-}
-.about h2 {
-  font-size: 3.5em;
-  margin-bottom: 10px;
-  color: #fff;
-}
-.about p {
-  font-size: 1em;
-  color: #fff;
 }
 .wave {
   position: relative;
@@ -150,6 +124,14 @@ section {
 .wave .shape-fill {
   fill: #f4f4f4;
 }
+.work {
+  display: flex;
+  height: 100vh;
+  background: #f4f4f4;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
 .work .card {
   position: relative;
   width: 280px;
@@ -167,7 +149,7 @@ section {
   backdrop-filter: blur(5px);
 }
 .work .card:hover {
-  background-image: linear-gradient(135deg, #d41e31, #491f8f, transparent);
+  background-image: linear-gradient(135deg, #d41e31, #491f8f);
 }
 .work .card .cardcontent {
   padding: 20px;
@@ -209,4 +191,52 @@ section {
   text-decoration: none;
   font-weight: 500px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.about {
+  position: relative;
+  padding: 100px 20vw;
+  color: #fff;
+  height: 100vh;
+}
+.about .dynamictext {
+  margin-bottom: 20px;
+  line-height: 70px;
+  height: 70px;
+  overflow: hidden;
+}
+.dynamictext li {
+  color: #fff;
+  list-style: none;
+  font-size: 3.5em;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -280px;
+  }
+}
+.dynamictext li span {
+  position: relative;
+}
+.dynamictext li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #021d45;
+  border-left: 2px solid #fff;
+  animation: typing 2.25s steps(31) infinite;
+}
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+.about p {
+  font-size: 1em;
+  color: #fff;
 }
