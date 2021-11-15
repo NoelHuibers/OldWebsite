@@ -261,7 +261,7 @@ section .about .dynamictext {
 .dynamictext li {
   color: #fff;
   list-style: none;
-  font-size: 3.5em;
+  font-size: 3.5vw;
   position: relative;
   top: 0;
   animation: slide 9s steps(4) infinite;
@@ -277,6 +277,8 @@ section .about .dynamictext {
 .dynamictext li span::after {
   content: "";
   position: absolute;
+  overflow: hidden;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;
@@ -287,7 +289,7 @@ section .about .dynamictext {
 @keyframes typing {
   100% {
     left: 100%;
-    margin: 0 -35px 0 35px;
+    margin: 0 -1em 0 1em;
   }
 }
 section .about p {
