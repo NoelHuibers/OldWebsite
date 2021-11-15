@@ -5,6 +5,64 @@
   font-family: "Inconsolata", monospace;
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 0;
+}
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-width: transparent;
+  }
+}
+#scrollpath {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+#progressbar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(to top, #fcb045, #d41e31, #491f8f);
+
+  animation: animate 5s linear infinite;
+}
+@keyframes animate {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+#progressbar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #fcb045, #d41e31, #491f8f);
+  filter: blur(10px);
+}
+#progressbar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #fcb045, #d41e31, #491f8f);
+  filter: blur(30px);
+}
 :root {
   --text: #fff;
   --text-inverse: #ff3e55;
@@ -14,12 +72,6 @@ body {
   height: 100vh;
   margin: 0;
   background: #021d45;
-}
-.container {
-  width: 100%;
-  height: 100%;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
 }
 header {
   position: fixed;
@@ -48,32 +100,31 @@ header nav {
   justify-content: center;
   align-items: center;
 }
-header li {
+header nav li {
   flex: 0 0 auto;
   list-style: none;
   margin-left: 1rem;
 }
-header li a {
+header nav li a {
   text-decoration: none;
   padding: 6px, 15px;
   color: var(--text);
   border-radius: 20px;
   transition: color 0.5s ease-out;
 }
-header li a:hover,
-header li a.active {
+header nav li a:hover {
   color: #ff3e55;
   transition: color 0.5s ease-out;
 }
-header li a.active {
+header nav li a.active {
   color: #217aff;
   transition: color 0.5s ease-out;
 }
-header li a.active:hover {
+header nav li:hover a.active {
   color: #ff3e55;
   transition: color 0.5s ease-out;
 }
-header li svg {
+header nav li svg {
   display: block;
   width: 1.2rem;
   height: 1.2rem;
@@ -82,14 +133,11 @@ header li svg {
   top: 2px;
   transition: fill 0.5s ease-out;
 }
-header li svg:hover {
+header nav li svg:hover {
   fill: var(--text);
   transition: fill 0.5s ease-out;
 }
-section {
-  scroll-snap-align: start;
-}
-.uc {
+section .main {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -98,7 +146,7 @@ section {
   justify-content: center;
   align-items: center;
 }
-.uc h2 {
+section .main h2 {
   position: absolute;
   color: #fff;
   white-space: nowrap;
@@ -124,7 +172,7 @@ section {
 .wave .shape-fill {
   fill: #f4f4f4;
 }
-.work {
+section .work {
   display: flex;
   height: 100vh;
   background: #f4f4f4;
@@ -132,7 +180,7 @@ section {
   align-items: center;
   justify-content: center;
 }
-.work .card {
+section .work .card {
   position: relative;
   width: 280px;
   height: 400px;
@@ -148,21 +196,21 @@ section {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
 }
-.work .card:hover {
+section .work .card:hover {
   background-image: linear-gradient(135deg, #d41e31, #491f8f);
 }
-.work .card .cardcontent {
+section .work .card .cardcontent {
   padding: 20px;
   text-align: center;
   transform: translateY(100px);
   opacity: 0;
   transition: 0.5s;
 }
-.work .card:hover .cardcontent {
+section .work .card:hover .cardcontent {
   transform: translateY(0px);
   opacity: 1;
 }
-.work .card .cardcontent h2 {
+section .work .card .cardcontent h2 {
   position: absolute;
   top: -40px;
   right: 20px;
@@ -170,17 +218,17 @@ section {
   color: rgba(255, 255, 255, 0.5);
   pointer-events: none;
 }
-.work .card .cardcontent h3 {
+section .work .card .cardcontent h3 {
   font-size: 1.8em;
   color: #fff;
   z-index: 1;
 }
-.work .card .cardcontent p {
+section .work .card .cardcontent p {
   font-size: 1em;
   color: #fff;
   font-weight: 300;
 }
-.work .card .cardcontent a {
+section .work .card .cardcontent a {
   position: relative;
   display: inline-block;
   padding: 8px 20px;
@@ -192,13 +240,13 @@ section {
   font-weight: 500px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
-.about {
+section .about {
   position: relative;
   padding: 100px 20vw;
   color: #fff;
   height: 100vh;
 }
-.about .dynamictext {
+section .about .dynamictext {
   margin-bottom: 20px;
   line-height: 70px;
   height: 70px;
@@ -236,7 +284,23 @@ section {
     margin: 0 -35px 0 35px;
   }
 }
-.about p {
+section .about p {
   font-size: 1em;
   color: #fff;
+}
+section .contact {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 200px 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .contact h2 {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
 }

@@ -5,7 +5,7 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
     </style>
-    <link rel="stylesheet" type="text/css" href="style.css?version=6" />
+    <link rel="stylesheet" type="text/css" href="style.css?version=7" />
   </head>
   <body>
     <div class = "container">
@@ -13,10 +13,10 @@
         <a href="#" class="logo">Noel Huibers</a>
         <nav>
           <!-- Navbar -->
-          <li><a href="#main" class="active">.main()</a></li>
-          <li><a href="#work">.work()</a></li>
-          <li><a href="#about">.about()</a></li>
-          <li><a href="#">.contact()</a></li>
+          <li><a href="#main" class="main active">.main()</a></li>
+          <li><a href="#work" class="work">.work()</a></li>
+          <li><a href="#about" class="about">.about()</a></li>
+          <li><a href="#contact" class="contact">.contact()</a></li>
           <li class="socials">
             <a
               href="https://www.linkedin.com/in/huibers/"
@@ -55,8 +55,8 @@
           </li>
         </nav>
       </header>
-      <section>
-        <div class="uc" id="main">
+      <section id="main">
+        <div class="main">
           <h2 id="text">Under Construction</h2>
         </div>
       </section>
@@ -73,8 +73,8 @@
           />
         </svg>
       </div>
-      <section>
-        <div class="work" id="work">
+      <section id="work">
+        <div class="work">
           <div class="card">
             <div class="cardcontent">
               <h2>01</h2>
@@ -107,8 +107,8 @@
           </div>
         </div>
       </section>
-      <section>
-        <div class="about" id="about">
+      <section id="about">
+        <div class="about">
           <div class="dynamictext">
             <li><span>Hello I'm Noel Huibers</span></li>
             <li><span>Servus ich bin Noel Huibers</span></li>
@@ -153,7 +153,12 @@
           </p>
         </div>
       </section>
-      <script src="app.js?version=2"></script>
+      <section id="contact">
+        <div class="contact">
+          <h2>Test</h2>
+        </div>
+      </section>
+      <script src="app.js?version=3"></script>
       <script type="text/javascript" src="vanilla-tilt.js"></script>
       <script>
         VanillaTilt.init(document.querySelectorAll(".card"), {
@@ -162,6 +167,14 @@
           glare: true,
           "max-glare": 1
         });
+      </script>
+      <script type="text/javascript">
+        let progress = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onScroll = function(){
+          let progressHeight = (window.pageYOffset / totalHeight) * 100;
+          progress.style.height = progressHeight + "%";
+        }
       </script>
     </body>
   </div>

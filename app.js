@@ -1,5 +1,5 @@
 const header = document.querySelector("header");
-const sectionTwo = document.querySelector(".work");
+const sectionTwo = document.querySelector("#work");
 
 const topMargin = header.offsetHeight;
 const bottomMargin = window.innerHeight - header.offsetHeight;
@@ -14,3 +14,22 @@ const observer = new IntersectionObserver(([entry]) => {
 }, options);
 
 observer.observe(sectionTwo);
+
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("header nav li a");
+window.onscroll = () => {
+  var current = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 60) {
+      current = section.getAttribute("id"); }
+  });
+
+  navLi.forEach((a) => {
+    a.classList.remove("active");
+    if (a.classList.contains(current)) {
+      a.classList.add("active");
+    }
+  });
+};
