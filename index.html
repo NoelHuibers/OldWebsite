@@ -5,7 +5,7 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
     </style>
-    <link rel="stylesheet" type="text/css" href="style.css?version=7" />
+    <link rel="stylesheet" type="text/css" href="style.css?version=9" />
   </head>
   <body>
     <div class = "container">
@@ -157,28 +157,28 @@
         <div class="contact">
           <div class="contactcard">
             <i><h2>contactForm {</h2></i>
-            <form>
+            <form class= "contactform" action="contactform.php" method="POST">
               <div class="inputBox">
-                <input type="text" name="" required="required">
+                <input type="text" name="name" required="required">
                 <span>inputFullName()</span>
               </div>
               <div class="inputBox">
-                <input type="email" name="" required="required">
+                <input type="email" name="email" required="required">
                 <span>inputEmail()</span>
               </div>
               <div class="inputBox">
-                <textarea required="required"></textarea>
+                <textarea name="message" required="required"></textarea>
                 <span>inputMessage()</span>
               </div>
               <div class="inputBox">
-                <input type="submit" value="send()" name="">
+                <button name="submit" type="submit">send()</button>
               </div>
             </form>
             <p>}</p>
           </div>
         </div>
       </section>
-      <script src="app.js?version=3"></script>
+      <script src="app.js?version=4"></script>
       <script type="text/javascript" src="vanilla-tilt.js"></script>
       <script>
         VanillaTilt.init(document.querySelectorAll(".card"), {

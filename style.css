@@ -385,7 +385,7 @@ section .contact .contactcard form .inputBox textarea {
 section .contact .contactcard form .inputBox textarea {
   height: 100px;
 }
-section .contact .contactcard form .inputBox input[type="submit"] {
+section .contact .contactcard form .inputBox button {
   background: #021d45;
   padding: 8px 14px;
   margin-top: -10px;
@@ -398,7 +398,7 @@ section .contact .contactcard form .inputBox input[type="submit"] {
   border-radius: 30px;
   letter-spacing: 4px;
 }
-section .contact .contactcard form .inputBox input[type="submit"]:focus {
+section .contact .contactcard form .inputBox button:focus {
   background: #ff3e55;
   color: #021d45;
 }
