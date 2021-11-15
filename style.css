@@ -73,6 +73,10 @@ body {
   margin: 0;
   background: #021d45;
 }
+.container {
+  width: 100%;
+  height: 100%;
+}
 header {
   position: fixed;
   top: 0;
@@ -244,7 +248,8 @@ section .about {
   position: relative;
   padding: 100px 20vw;
   color: #fff;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
 section .about .dynamictext {
   margin-bottom: 20px;
@@ -297,10 +302,136 @@ section .contact {
   justify-content: center;
   align-items: center;
 }
-section .contact h2 {
+section .contact .contactcard {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 20px;
+  height: 600px;
+  background: #fff;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .contact .contactcard i {
+  position: absolute;
+  top: 40px;
+  left: -15px;
+  width: 95%;
+  max-width: 350px;
+  height: 50px;
+  background: #ff3e55;
+  border-radius: 30px;
+  border-bottom-left-radius: 0;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+section .contact .contactcard i::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  width: 15px;
+  height: 30px;
+  background: #d43346;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  z-index: 2;
+}
+section .contact .contactcard i::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  width: 15px;
+  height: 15px;
+  background: #ff3e55;
+}
+section .contact .contactcard i h2 {
   position: absolute;
   color: #fff;
-  white-space: nowrap;
-  font-size: 7.5vw;
-  z-index: 9;
+  font-size: 2em;
+  z-index: 1;
+  padding: 0 0 0 25px;
+}
+section .contact .contactcard form {
+  position: relative;
+  width: 90%;
+  padding: 0 0 0 75px;
+}
+section .contact .contactcard form .inputBox {
+  position: relative;
+  margin-bottom: 40px;
+}
+section .contact .contactcard form .inputBox:last-child {
+  margin-bottom: 0px;
+}
+section .contact .contactcard form .inputBox input,
+section .contact .contactcard form .inputBox textarea {
+  position: relative;
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  color: #021d45;
+  padding-bottom: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border-bottom: 2px solid #021d45;
+  resize: none;
+}
+section .contact .contactcard form .inputBox textarea {
+  height: 100px;
+}
+section .contact .contactcard form .inputBox input[type="submit"] {
+  background: #021d45;
+  padding: 8px 14px;
+  margin-top: -10px;
+  width: 100px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  border-radius: 30px;
+  letter-spacing: 4px;
+}
+section .contact .contactcard form .inputBox input[type="submit"]:focus {
+  background: #ff3e55;
+  color: #021d45;
+}
+section .contact .contactcard form .inputBox span {
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+  font-weight: 300;
+  display: inline-block;
+  pointer-events: none;
+  letter-spacing: 1px;
+  color: #021d45;
+  transition: all 0.2s;
+}
+section .contact .contactcard form .inputBox input:focus ~ span,
+section .contact .contactcard form .inputBox textarea:focus ~ span,
+section .contact .contactcard form .inputBox input:valid ~ span,
+section .contact .contactcard form .inputBox textarea:valid ~ span {
+  transform: translateY(-24px);
+  color: #ff3e55;
+  font-size: 14px;
+}
+section .contact .contactcard form .inputBox input:focus,
+section .contact .contactcard form .inputBox textarea:focus,
+section .contact .contactcard form .inputBox input:valid,
+section .contact .contactcard form .inputBox textarea:valid {
+  border-bottom-color: #217aff;
+}
+section .contact .contactcard p {
+  position: absolute;
+  z-index: 1;
+  color: #ff3e55;
+  font-size: 2em;
+  bottom: 10px;
+  left: 15px;
 }
