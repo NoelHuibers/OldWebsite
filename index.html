@@ -171,6 +171,17 @@
         }
       </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
+      <script>
+        var animation = bodymovin.loadAnimation({
+           // animationData: { /* ... */ },
+           container: document.getElementById('containerSVG'), // required
+           path: 'data.json', // required
+           renderer: 'svg', // required
+           loop: true, // optional
+           autoplay: true, // optional
+           name: "Demo Animation", // optional
+        });
+      </script>
     </body>
   </div>
 </html>

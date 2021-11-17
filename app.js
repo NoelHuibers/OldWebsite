@@ -35,12 +35,3 @@ window.onscroll = () => {
 };
 
 import lottieWeb from 'https://cdn.skypack.dev/lottie-web';
-
-var animation = lottieWeb.loadAnimation({
-  container: document.getElementById('containerSVG'),
-  path: 'data.json',
-  renderer: 'svg',
-  loop: false,
-  autoplay: true,
-  name: "Demo Animation",
-});
