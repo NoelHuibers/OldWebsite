@@ -5,7 +5,7 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
     </style>
-    <link rel="stylesheet" type="text/css" href="style.css?version=3" />
+    <link rel="stylesheet" type="text/css" href="style.css?version=0.2" />
   </head>
   <body>
     <div class = "container">
@@ -152,7 +152,7 @@
           </div>
         </div>
       </section>
-      <script src="app.js?version=2"></script>
+      <script src="app.js?version=0.2"></script>
       <script type="text/javascript" src="vanilla-tilt.js"></script>
       <script>
         VanillaTilt.init(document.querySelectorAll(".card"), {
@@ -163,7 +163,7 @@
         });
       </script>
       <script type="text/javascript">
-        let progress = document.getElementById('progressbar');
+        let progress = document.getElementById("progressbar");
         let totalHeight = document.body.scrollHeight - window.innerHeight;
         window.onScroll = function(){
           let progressHeight = (window.pageYOffset / totalHeight) * 100;
@@ -174,12 +174,11 @@
       <script>
         var animation = bodymovin.loadAnimation({
           container: document.getElementById("containerSVG"),
-          path: "data.json",
+          path: "data.json?version=0.2",
           renderer: "svg",
-          loop: false,
+          loop: true,
           autoplay: true
         });
-        animation.setSpeed(1.5);
       </script>
     </body>
   </div>
