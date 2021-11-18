@@ -91,13 +91,15 @@ header {
   align-items: center;
 }
 header .logo {
-  margin: auto;
   color: var(--text);
   font-weight: 700;
   text-decoration: none;
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+header .logo2 {
+  display: none;
 }
 header nav ul {
   margin: auto;
@@ -184,12 +186,11 @@ header nav li svg:hover {
     justify-content: flex-end;
     text-align: right;
     align-items: flex-end;
-    width: 100vw;
+    width: 60vw;
     height: 100vh;
     padding: 8rem 1rem 4rem;
     background: hsl(0 0% 100% / 0.1);
     transform: translateX(100%);
-    transition: 0.4s;
   }
   header nav ul li {
     display: block;
@@ -201,13 +202,25 @@ header nav li svg:hover {
     font-weight: 600;
     font-size: 2rem;
   }
-  header nav ul li.socials {
+  .socialscomplete {
     margin: 0 0 0 2rem;
   }
   header nav ul li svg {
     width: 3rem;
     height: 3rem;
     top: 0;
+  }
+  header .logo2 {
+    display: block;
+    color: var(--text);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  header .logo {
+    display: none;
   }
 }
 .primary-navbar[data-visible="true"] {
