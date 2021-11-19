@@ -394,6 +394,7 @@ section .contact {
 section .contact .contactcard {
   position: relative;
   width: 100%;
+  min-width: 280px;
   max-width: 1100px;
   margin: 20px;
   height: 600px;
