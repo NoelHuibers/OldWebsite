@@ -448,7 +448,7 @@ section .contact .contactcard i h2 {
 section .contact .contactcard form {
   position: relative;
   width: 90%;
-  padding: 0 0 0 75px;
+  padding: 0 0 0 5vw;
 }
 section .contact .contactcard form .inputBox {
   position: relative;
