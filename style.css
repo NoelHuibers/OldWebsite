@@ -167,10 +167,6 @@ header nav li svg:hover {
   transform-origin: 0 0;
   transition: 0.4s;
 }
-.hamburger:hover span {
-  background-color: var(--text-inverse);
-  transition: color 0.5s ease-out;
-}
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -191,6 +187,7 @@ header nav li svg:hover {
     padding: 8rem 1rem 4rem;
     background: hsl(0 0% 100% / 0.1);
     transform: translateX(100%);
+    overflow: hidden;
   }
   header nav ul li {
     display: block;
@@ -226,6 +223,25 @@ header nav li svg:hover {
 .primary-navbar[data-visible="true"] {
   transform: translateX(0%);
   transition: 0.4s;
+}
+.hamburger[aria-expanded="true"] span {
+  margin-right: -30px;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1) {
+  width: 33px;
+  transform: translateY(0px) rotate(45deg);
+  transition-delay: 0.125s;
+  background: #ff3e55;
+}
+.hamburger[aria-expanded="true"] span:nth-child(2) {
+  transform: translateX(6rem);
+  background: #ff3e55;
+}
+.hamburger[aria-expanded="true"] span:nth-child(3) {
+  width: 33px;
+  transform: translateY(5px) rotate(315deg);
+  transition-delay: 0.125s;
+  background: #ff3e55;
 }
 section .main {
   position: relative;
