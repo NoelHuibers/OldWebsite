@@ -84,7 +84,7 @@ header {
   left: 0;
   width: 100%;
   height: 8rem;
-  z-index: 10000;
+  z-index: 1000;
   padding: 0 2rem 5rem;
   display: flex;
   justify-content: space-between;
@@ -163,7 +163,7 @@ header nav li svg:hover {
   margin-bottom: 5px;
   background-color: var(--text);
   border-radius: 6px;
-  z-index: 1px;
+  z-index: 1;
   transform-origin: 0 0;
   transition: 0.4s;
 }
