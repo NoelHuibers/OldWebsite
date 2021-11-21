@@ -239,7 +239,7 @@ header nav li svg:hover {
 }
 .hamburger[aria-expanded="true"] span:nth-child(3) {
   width: 33px;
-  transform: translateY(5px) rotate(315deg);
+  transform: translateY(5px) translateX(-2px) rotate(-45deg);
   transition-delay: 0.125s;
   background: #ff3e55;
 }
