@@ -234,7 +234,7 @@ header nav li svg:hover {
   background: #ff3e55;
 }
 .hamburger[aria-expanded="true"] span:nth-child(2) {
-  transform: translateX(6rem);
+  transform: translateX(40px);
   background: #ff3e55;
 }
 .hamburger[aria-expanded="true"] span:nth-child(3) {
