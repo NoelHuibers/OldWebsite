@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteRule ^CountIT projects/CountIT.html [NC,L]
+RewriteRule ^datenschutz datenschutz.html [NC,L]

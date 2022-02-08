@@ -49,3 +49,5 @@ navToggle.addEventListener("click", () => {
     navToggle.setAttribute("aria-expanded", false);
   }
 });
+
+const swup = new swup()

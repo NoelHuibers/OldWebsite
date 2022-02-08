@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+  scroll-behavior: smooth;
+}
+:root {
+  --text: #021d45;
+  --text-inverse: #ff3e55;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: #f4f4f4;
+  overflow-x: hidden;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  z-index: 1000;
+  padding: 0 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a svg {
+  fill: var(--text);
+  text-decoration: none;
+  transition: color 0.5s ease-out;
+}
+header a svg:hover {
+  fill: var(--text-inverse);
+}
+header nav {
+  display: flex;
+}
+header nav li {
+  list-style: none;
+  margin-left: 1rem;
+}
+header nav li svg {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: var(--text);
+  position: relative;
+  top: 2px;
+  transition: fill 0.5s ease-out;
+}
+header nav li svg:hover {
+  fill: var(--text-inverse);
+  transition: fill 0.5s ease-out;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 200px 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section h1 {
+  position: absolute;
+  color: var(--text);
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+}
