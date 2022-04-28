@@ -242,8 +242,22 @@
                 <span>inputEmail()</span>
               </div>
               <div class="inputBox">
-                <textarea name="message" required="required"></textarea>
+                <textarea name="honeypot" required="required"></textarea>
                 <span>inputMessage()</span>
+              </div>
+              <div
+                class="inputBox"
+                style="display: none !important"
+                tabindex="-1"
+                autocomplete="off"
+              >
+                <textarea
+                  name="message"
+                  required="required"
+                  style="display: none !important"
+                  tabindex="-1"
+                  autocomplete="off"
+                ></textarea>
               </div>
               <input
                 type="checkbox"

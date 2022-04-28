@@ -2,13 +2,13 @@
 
 if (isset($_POST["submit"])) {
   $honeypot = FALSE;
-  if (!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) {
+  if ((!empty($_REQUEST['contact_me_by_fax_only']) && (bool) $_REQUEST['contact_me_by_fax_only'] == TRUE) or !empty($_REQUEST['message'])) {
     $honeypot = TRUE;
     log_spambot($_REQUEST);
   } else {
     $name = $_POST["name"];
     $mailFrom = $_POST["email"];
-    $message = $_POST["message"];
+    $message = $_POST["honeypot"];
   
     $mailTo = "noel@huibers.io";
     $subject = "Mail from my Website";
