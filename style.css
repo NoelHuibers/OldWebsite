@@ -325,7 +325,6 @@ section .work .cardabsolute {
 section .work .cardbehind {
   position: absolute;
   z-index: 1;
-  max-width: 360px;
   width: 280px;
   height: 400px;
   margin: 30px;
