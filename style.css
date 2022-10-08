@@ -320,6 +320,7 @@ section .work .cardabsolute {
   -webkit-box-pack: center;
   justify-content: center;
   box-sizing: inherit;
+  height: 70vh;
 }
 
 section .work .cardbehind {
