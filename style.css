@@ -360,22 +360,30 @@ section .work .cardbehind {
 }
 
 section .work .cardabsolute:hover .cardbehind1 {
-  transform:rotateX(-30deg) rotateY(30deg) translateY(-3px);
+  transform: rotateX(-30deg) rotateY(30deg) translateY(-3px);
+  -webkit-transform: rotateX(-30deg) rotateY(30deg) translateY(-3px);
+  -ms-transform: rotateX(-30deg) rotateY(30deg) translateY(-3px);
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
 
 section .work .cardabsolute:hover .cardbehind2 {
-  transform:rotateX(30deg) rotateY(30deg) translateY(-3px);
+  transform: rotateX(30deg) rotateY(30deg) translateY(-3px);
+  -webkit-transform: rotateX(30deg) rotateY(30deg) translateY(-3px);
+  -ms-transform: rotateX(30deg) rotateY(30deg) translateY(-3px);
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
 
 section .work .cardabsolute:hover .cardbehind3 {
-  transform:rotateX(-30deg) rotateY(30deg) translateY(-3px);
+  transform: rotateX(-30deg) rotateY(30deg) translateY(-3px);
+  -webkit-transform: rotateX(-30deg) rotateY(30deg) translateY(-3px);
+  -ms-transform: rotateX(-30deg) rotateY(30deg) translateY(-3px);
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
 
 section .work .cardabsolute:hover .cardbehind4 {
-  transform:rotateX(30deg) rotateY(30deg) translateY(-3px);
+  transform: rotateX(30deg) rotateY(30deg) translateY(-3px);
+  -webkit-transform: rotateX(30deg) rotateY(30deg) translateY(-3px);
+  -ms-transform: rotateX(30deg) rotateY(30deg) translateY(-3px);
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
 
