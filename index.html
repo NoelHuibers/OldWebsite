@@ -83,53 +83,64 @@
     </div>
     <section id="work">
       <div class="work">
-        <div class="card">
-          <div class="cardcontent">
-            <h2>01</h2>
-            <h3>Landesgartenschau 2023</h3>
-            <p>
-              A Cross platform Flutter App for the Landesgartenschau 2023.
-            </p>
-            <a href="#work">Read More</a>
+        <div class="cardabsolute">
+          <div class="cardbehind cardbehind1"></div>
+          <div class="card card1">          
+            <div class="cardcontent">
+              <h2>01</h2>
+              <h3>Landesgartenschau 2023</h3>
+              <p>
+                A Cross platform Flutter App for the Landesgartenschau 2023.
+              </p>
+              <a href="#work">Read More</a>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="cardcontent">
-            <h2>02</h2>
-            <h3>Stock analysis</h3>
-            <p>
-              This project is a Webapp for stock analysis using an API to get
-              the Data of the DowJones and DAX. It has a searchbar and filter
-              to get a Stock. Gives a current graph in candle stick and graph
-              form of a stock and transformes the data into multiple
-              indicators used in the world of economics such as the RSI,
-              Volatility or Bollingbands.
-            </p>
-            <a href="https://stock-ticker.tk/">Read More</a>
+        <div class="cardabsolute">
+          <div class="cardbehind cardbehind2"></div>
+          <div class="card card2">
+            <div class="cardcontent">
+              <h2>02</h2>
+              <h3>Stock analysis</h3>
+              <p>
+                This project is a Webapp for stock analysis using an API to get
+                the Data of the DowJones and DAX. It has a searchbar and filter
+                to get a Stock. Gives a current graph in candle stick and graph
+                form of a stock and transformes the data into multiple
+                indicators used in the world of economics such as the RSI,
+                Volatility or Bollingbands.
+              </p>
+              <a href="https://stock-ticker.tk/">Read More</a>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="cardcontent">
-            <h2>03</h2>
-            <h3>Compass 3D</h3>
-            <p>
-              An AR Compass
-            </p>
-            <a href="#work">Read More</a>
+        <div class="cardabsolute">
+          <div class="cardbehind cardbehind3"></div>
+          <div class="card card3">          
+            <div class="cardcontent">
+              <h2>03</h2>
+              <h3>Compass 3D</h3>
+              <p>
+                An AR Compass
+              </p>
+              <a href="#work">Read More</a>
+            </div>
           </div>
         </div>
-      <div class="card">
-        <div class="cardcontent">
-          <h2>04</h2>
-          <h3>Count IT</h3>
-          <p>
-            Count IT is an Android, iOS and Desktop App to Count diffrent
-            things with an awesome UX & UI.
-          </p>
-          <a href="/CountIT">Read More</a>
+        <div class="cardabsolute">
+          <div class="cardbehind cardbehind4"></div>
+          <div class="card card4">          
+            <div class="cardcontent">
+              <h2>04</h2>
+              <h3>Count IT</h3>
+              <p>
+                Count IT is an Android, iOS and Desktop App to Count diffrent
+                things with an awesome UX & UI.
+              </p>
+              <a href="/CountIT">Read More</a>
+            </div>
         </div>
       </div>
-    </div>
     </section>
     <section id="about">
       <div class="about">
@@ -191,11 +202,9 @@
   <script src="app.js?version=0.4"></script>
   <script type="text/javascript" src="vanilla-tilt.js"></script>
   <script>
-    VanillaTilt.init(document.querySelectorAll(".card"), {
+    VanillaTilt.init(document.querySelectorAll(".cardabsolute"), {
       max: 25,
       speed: 400,
-      glare: true,
-      "max-glare": 1,
     });
   </script>
   <script type="text/javascript">
