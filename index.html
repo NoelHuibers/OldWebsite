@@ -407,7 +407,7 @@
             <i>
               <h2>contactForm {</h2>
             </i>
-            <form class="contactform" action="contactform.php" method="POST">
+            <form class="contactform" onSubmit="sendEmail(); reset(); return false">
               <div class="inputBox">
                 <input type="text" name="name" required="required" />
                 <span>inputFullName()</span>
@@ -480,6 +480,21 @@
         autoplay: true,
       });
       animation.setSpeed(1.5);
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+      function sendEmail(){
+        if (document.getElementById("message").value == null) {
+          Email.send({
+          SecureToken : "96b88442-2dad-44d0-9083-0c84a4490d11",
+          To : 'noel@huibers.io',
+          From : document.getElementById("email").value,
+          Subject : "Email From:" + document.getElementById("name").value,
+          Body : document.getElementById("honeypot").value,
+        }).then(
+          message => alert("Message sent successfully")
+        );
+        }
+      }
     </script>
   </body>
 </html>
