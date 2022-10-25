@@ -157,9 +157,7 @@
       </div>
       <section id="work">
         <div class="work">
-          <div class="cardabsolute">
-            <div class="cardbehind cardbehind2"></div>
-            <div class="card card2">
+            <div class="card">
               <div class="logos">
                 <svg viewBox="0 0 256 256">
                   <path
@@ -212,10 +210,7 @@
                 <a href="#work">Read More</a>
               </div>
             </div>
-          </div>
-          <div class="cardabsolute">
-            <div class="cardbehind cardbehind4"></div>
-            <div class="card card4">
+            <div class="card">
               <div class="logos">
                 <svg viewBox="0 0 400 400">
                   <style>
@@ -293,10 +288,7 @@
                 <a href="https://stock-ticker.tk/">Read More</a>
               </div>
             </div>
-          </div>
-          <div class="cardabsolute">
-            <div class="cardbehind cardbehind3"></div>
-            <div class="card card3">
+            <div class="card">
               <div class="logos">
                 <svg viewBox="0 -1.428 255.582 290.108">
                   <path
@@ -320,7 +312,7 @@
                     />
                   </g>
                 </svg>
-              </div>
+                </div>
               <div class="cardcontent">
                 <h2>03</h2>
                 <h3>Compass 3D</h3>
@@ -328,10 +320,7 @@
                 <a href="#work">Read More</a>
               </div>
             </div>
-          </div>
-          <div class="cardabsolute">
-            <div class="cardbehind cardbehind1"></div>
-            <div class="card card1">
+            <div class="card">
               <div class="logos">
                 <svg viewBox="6.527 4.399 290.829 540.906">
                   <path
@@ -375,7 +364,6 @@
               </div>
             </div>
           </div>
-        </div>
       </section>
       <section id="about">
         <div class="about">
@@ -454,18 +442,12 @@
     <script src="app.js?version=0.4"></script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script>
-      VanillaTilt.init(document.querySelectorAll(".cardabsolute"), {
+      VanillaTilt.init(document.querySelectorAll(".card"), {
         max: 25,
         speed: 400,
+        glare: true,
+        "max-glare": 1,
       });
-    </script>
-    <script type="text/javascript">
-      let progress = document.getElementById("progressbar");
-      let totalHeight = document.body.scrollHeight - window.innerHeight;
-      window.onScroll = function () {
-        let progressHeight = (window.pageYOffset / totalHeight) * 100;
-        progress.style.height = progressHeight + "%";
-      };
     </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"
@@ -477,7 +459,7 @@
         container: document.getElementById("containerSVG"),
         path: "data.json?version=0.4",
         renderer: "svg",
-        loop: true,
+        loop: false,
         autoplay: true,
       });
       animation.setSpeed(1.5);
