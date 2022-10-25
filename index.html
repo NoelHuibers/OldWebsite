@@ -484,7 +484,8 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function sendEmail(){
-        if (document.getElementById("message").value == null) {
+        var message = document.getElementById("message")
+        if (message != null) {
           Email.send({
             SecureToken : "96b88442-2dad-44d0-9083-0c84a4490d11",
             To : 'noel@huibers.io',
