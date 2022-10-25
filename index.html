@@ -409,15 +409,15 @@
             </i>
             <form class="contactform" onSubmit="sendEmail(); reset(); return false">
               <div class="inputBox">
-                <input type="text" name="name" required="required" />
+                <input type="text" name="name" id="name" required="required" />
                 <span>inputFullName()</span>
               </div>
               <div class="inputBox">
-                <input type="email" name="email" required="required" />
+                <input type="email" name="email" id="email" required="required" />
                 <span>inputEmail()</span>
               </div>
               <div class="inputBox">
-                <textarea name="honeypot" required="required"></textarea>
+                <textarea name="honeypot" id="honeypot" required="required"></textarea>
                 <span>inputMessage()</span>
               </div>
               <div
@@ -428,6 +428,7 @@
               >
                 <textarea
                   name="message"
+                  id="message"
                   style="display: none !important"
                   tabindex="-1"
                   autocomplete="off"
@@ -442,7 +443,7 @@
                 autocomplete="off"
               />
               <div class="inputBox">
-                <button name="submit" type="submit">send()</button>
+                <button name="submit" type="submit" id="submit">send()</button>
               </div>
             </form>
             <p>}</p>
@@ -484,14 +485,13 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function sendEmail(){
-        var message = document.getElementsByName("message")
-        if (message == null) {
+        if (document.getElementById("message").value == "") {
           Email.send({
             SecureToken : "0f5b59dc-9e51-40c4-b646-5b0398b225f3",
             To : 'noel@huibers.io',
-            From : document.getElementsByName("email").value,
-            Subject : "Email From:" + document.getElementsByName("name").value,
-            Body : document.getElementsByName("honeypot").value
+            From : document.getElementById("email").value,
+            Subject : "Email From:" + document.getElementById("name").value,
+            Body : document.getElementById("honeypot").value
           }).then(
           message => alert("Message sent successfully")
           );
