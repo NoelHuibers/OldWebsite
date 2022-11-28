@@ -469,11 +469,11 @@
       function sendEmail(){
         if (document.getElementById("message").value == "") {
           Email.send({
-            SecureToken : "a0378e49-8bb0-4092-b807-89c811a31f5c",
+            SecureToken: "61bb56c9-84b0-4449-891d-edc9894f4288",
             To : 'noel@huibers.io',
-            From : document.getElementById("email").value,
-            Subject : "Email From:" + document.getElementById("name").value,
-            Body : document.getElementById("honeypot").value
+            From : 'mywebsite@huibers.io',
+            Subject : "Email From: " + document.getElementById("name").value,
+            Body : "From: " + document.getElementById("email").value + "\n" + document.getElementById("honeypot").value
           }).then(
           message => alert("Message sent successfully")
           );
